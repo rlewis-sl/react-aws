@@ -1,17 +1,20 @@
 import ItemList from './ItemList';
+import {getWidgetsAsync} from './api/widgets';
 import './App.css';
 
-function App() {
-  const items = [
-    { name: 'An item' }, 
-    { name: 'Another item' }, 
-    { name: 'Yet another item' }, 
-    { name: 'Some random item' }
-  ];
+async function getWidgets() {
+  try {
+    return getWidgetsAsync();
+  } catch (e) {
+    console.log(e);
+    return [];
+  }
+}
 
-  return (
+function App() {
+    return (
     <div className="App">
-      <ItemList items={items}/>
+      <ItemList getItems={getWidgets}/>
     </div>
   );
 }
