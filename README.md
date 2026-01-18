@@ -45,4 +45,21 @@ The production build is created in the `dist` folder and deployed to S3.
 
 ## Testing
 
-Note: Test configuration with Jest/Vitest is not included in this migration. For testing setup, consider migrating to [Vitest](https://vitest.dev/) which is specifically designed to work with Vite.
+This project uses [Vitest](https://vitest.dev/) for testing, which is specifically designed to work with Vite.
+
+### `npm test`
+
+Runs the test suite in watch mode.\
+Tests will automatically re-run when you make changes to your code.
+
+### `npm run test:run`
+
+Runs the test suite once and exits.\
+This is useful for CI/CD pipelines.
+
+### `npm run test:ui`
+
+Launches the Vitest UI for an interactive testing experience.\
+Open [http://localhost:51204](http://localhost:51204) to view the test interface in your browser.
+
+Tests are located alongside the source files with the `.test.js` extension. The test suite uses [@testing-library/react](https://testing-library.com/react) for component testing and [@testing-library/jest-dom](https://github.com/testing-library/jest-dom) for additional matchers.
