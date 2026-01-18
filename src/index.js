@@ -4,9 +4,6 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
-// React 18 introduces a new root API for rendering.
-// The createRoot API replaces the legacy ReactDOM.render method.
-// This provides better support for concurrent features in React 18.
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
