@@ -10,11 +10,11 @@
     "@testing-library/jest-dom": "^5.15.0",
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^12.8.3",
-    "@vitejs/plugin-react": "^5.1.2",
-    "@vitest/ui": "^4.0.17",
+    "@vitejs/plugin-react": "^6.0.1",
+    "@vitest/ui": "^4.1.0",
     "jsdom": "^27.4.0",
-    "vite": "^7.3.1",
-    "vitest": "^4.0.17"
+    "vite": "^8.0.1",
+    "vitest": "^4.1.0"
   },
   "scripts": {
     "start": "vite",
@@ -26,6 +26,9 @@
     "test:run": "vitest run",
     "create-web": "cd aws/ && create-web.bat",
     "deploy-web": "cd aws/ && deploy-web.bat"
+  },
+  "overrides": {
+    "flatted": "^3.4.2"
   },
   "browserslist": {
     "production": [
